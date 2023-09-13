@@ -24,3 +24,4 @@ While we click on "Add to order button" total cost of order calculates the quant
 
 ➢ available quantity of each module
 
+<img width="1440" alt="Screenshot 2023-09-13 at 20 26 31" src="https://github.com/Axtrkv/Twnty-solar-modules/assets/112809121/ea232f61-03bc-4643-9225-10a0aff1784a">
