@@ -4,7 +4,7 @@ Features included in checkout page:
 
 ● list of available solar modules and their quantity fetched from the API
 
-API was given to me in TT document, i fetched it with async/await function and i restructured it from {key : {values}} to an array for better data accessibility.
+API was given to me in TestTask document from recruiter. I fetched it with async/await function and i restructured it from {key : {values}} to an array for better data accessibility.
 
 ● possibility to select solar modules
 
