@@ -8,7 +8,7 @@ API was given to me in TestTask document from recruiter. I fetched it with async
 
 ● possibility to select solar modules
 
-I made the button - "Add to order". On which we click and value become true.
+I made the button - "Add to order". On which when we click, value becomes true.
 
 ● display total cost of the order
 
