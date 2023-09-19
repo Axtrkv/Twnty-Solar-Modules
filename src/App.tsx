@@ -58,10 +58,9 @@ function App() {
 
     setsolarData(data);
     setTotal(
-      total +
-        (data[index].isOpened
-          ? data[index].price * data[index].selectedCounter
-          : 0)
+      data[index].isOpened
+        ? total + data[index].price * data[index].selectedCounter
+        : total - data[index].price * data[index].selectedCounter
     );
   };
 
