@@ -10,9 +10,31 @@ function App() {
   const [solarData, setsolarData] = useState<IModule[]>([]);
   const [total, setTotal] = useState(0);
 
+  async function fetchProducts() {
+    const ApiData = await fetch("https://testtask.twnty.de");
+    const response = await ApiData.json();
+    const newData = Object.keys(response).map((key) => {
+      return {
+        ...response[key],
+        name: key,
+        isOpened: false,
+        selectedCounter: 0,
+      };
+    });
+    setsolarData(newData);
+  }
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
   const handlerSetCount = (index: number, modifier: number) => {
     const data = solarData.map((item, itemIndex) => {
-      if (index === itemIndex && item.selectedCounter + modifier >= 0) {
+      if (
+        index === itemIndex &&
+        item.selectedCounter + modifier >= 0 &&
+        item.selectedCounter + modifier <= item.quantity
+      ) {
         return {
           ...item,
           selectedCounter: item.selectedCounter + modifier,
@@ -42,24 +64,6 @@ function App() {
           : 0)
     );
   };
-
-  async function fetchProducts() {
-    const ApiData = await fetch("https://testtask.twnty.de");
-    const response = await ApiData.json();
-    const newData = Object.keys(response).map((key) => {
-      return {
-        ...response[key],
-        name: key,
-        isOpened: false,
-        selectedCounter: 0,
-      };
-    });
-    setsolarData(newData);
-  }
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
 
   function showData() {
     return solarData.map((item, index) => {
