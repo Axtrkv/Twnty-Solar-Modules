@@ -1,4 +1,4 @@
-Checkout page using HTML/CSS/TypeScript/React/React-router.
+Checkout page using HTML/CSS/TypeScript/React.
 
 Features included in checkout page:
 
